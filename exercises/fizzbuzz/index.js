@@ -12,6 +12,27 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  for (let i = 1; i <= n; ++i) {
+    const modBy3 = i % 3 === 0
+    const modBy5 = i % 5 === 0
+
+    if (!modBy3 && !modBy5) {
+      console.log(i)
+      continue
+    }
+
+    let log = ''
+    if (modBy3) {
+      log += 'fizz'
+    }
+
+    if (modBy5) {
+      log += 'buzz'
+    }
+
+    console.log(log)
+  }
+}
 
 module.exports = fizzBuzz;
